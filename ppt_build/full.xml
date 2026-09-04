@@ -1,0 +1,989 @@
+<presentation id="WgC0sJLbolktN2d5OzVczgNSnse" xmlns="https://www.larkoffice.com/sml/2.0" width="960" height="540">
+  <title>体检中心管理系统-项目答辩</title>
+  <theme>
+    <textStyles>
+      <headline fontColor="rgba(31, 35, 41, 1)"/>
+      <sub-headline fontColor="rgba(31, 35, 41, 1)"/>
+      <body fontColor="rgba(31, 35, 41, 1)"/>
+      <caption fontColor="rgba(155, 158, 162, 1)" fontSize="14"/>
+    </textStyles>
+  </theme>
+  <slide id="pjj">
+    <style>
+      <fill id="fjj">
+        <fillColor color="linear-gradient(135deg,rgba(0, 48, 135, 1) 0%,rgba(0, 112, 186, 1) 100%)"/>
+      </fill>
+    </style>
+    <data>
+      <icon width="56" height="56" topLeftX="80" topLeftY="78" iconType="iconpark/Health/red-cross.svg" id="bQP">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+      </icon>
+      <shape width="820" height="110" topLeftX="80" topLeftY="168" type="text" id="bQT">
+        <content textType="title" fontSize="56" fontFamily="思源黑体" color="rgba(255, 255, 255, 1)" bold="true" letterSpacing="2" textAlign="left" wrap="false">
+          <p>体检中心管理系统</p>
+        </content>
+      </shape>
+      <shape width="840" height="56" topLeftX="80" topLeftY="272" type="text" id="bQX">
+        <content textType="sub-headline" fontSize="24" fontFamily="思源黑体" color="rgba(255, 255, 255, 0.949)" bold="true" textAlign="left" wrap="false">
+          <p>HealthySys · 基于 Java Swing + MySQL 的桌面端体检管理系统</p>
+        </content>
+      </shape>
+      <shape width="840" height="44" topLeftX="82" topLeftY="352" type="text" id="bQt">
+        <content fontSize="17" fontFamily="思源黑体" color="rgba(255, 255, 255, 0.851)" textAlign="left" wrap="false">
+          <p>多角色协同 · 体检业务全流程管理 · Maven 多模块工程</p>
+        </content>
+      </shape>
+      <shape width="840" height="40" topLeftX="80" topLeftY="468" type="text" id="bQg">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(255, 255, 255, 0.8)" textAlign="left" wrap="false">
+          <p>项目答辩 答辩人：____________ 日期：2026-09-04 V1.0</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bQQ">
+      <content>
+        <p>各位老师好，我今天答辩的项目是体检中心管理系统，代号 HealthySys，是一款基于 Java Swing 和 MySQL 的桌面端体检业务管理系统。</p>
+        <p>系统面向体检中心的医生和患者两类用户，覆盖检查项、检查组、预约、结果录入与跟踪等核心业务，并采用 Maven 多模块工程组织代码。</p>
+        <p>本页封面信息中的答辩人姓名可按实际情况填写。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjk">
+    <style>
+      <fill id="fjk">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bQG">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>01 · 项目背景与设计目标</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bQo">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>02</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bQx">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>项目背景与设计目标</p>
+        </content>
+      </shape>
+      <line id="bQI" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <shape width="400" height="40" topLeftX="60" topLeftY="168" type="text" id="bQm">
+        <content textType="sub-headline" fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>项目背景</p>
+        </content>
+      </shape>
+      <shape width="400" height="220" topLeftX="60" topLeftY="216" type="text" id="bQz">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.4" textAlign="left">
+          <p>传统体检中心在检查项维护、体检预约、结果记录等环节依赖纸质单据与人工登记，存在易错、难追溯、协作成本高等问题。</p>
+          <p>本项目以桌面端管理软件为载体，将检查项与检查组维护、患者预约、医生录入结果、历次跟踪统一纳入一个系统，实现体检业务的信息化管理。</p>
+        </content>
+      </shape>
+      <shape width="400" height="40" topLeftX="500" topLeftY="168" type="text" id="bQM">
+        <content textType="sub-headline" fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>设计目标</p>
+        </content>
+      </shape>
+      <shape width="410" height="220" topLeftX="500" topLeftY="216" type="text" id="bQZ">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.45" list="bullet" listStyle="circle-hollow-square" textAlign="left">
+          <ul>
+            <li>
+              <p>数据统一管理：检查项、检查组、预约、结果集中入库，全程可追溯</p>
+            </li>
+            <li>
+              <p>双角色协同：医生负责维护与录入，患者自助预约并查看跟踪</p>
+            </li>
+            <li>
+              <p>结构可维护：按大功能拆分 Maven 多模块，便于多人并行开发</p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <line id="bQO" startX="60" startY="470" endX="900.0005952378843" endY="470">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <shape width="840" height="36" topLeftX="60" topLeftY="486" type="text" id="bQW">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" textAlign="left" wrap="false">
+          <p>技术选型：<span color="rgba(71, 85, 105, 1)" fontFamily="Roboto Mono">Java Swing</span> · <span color="rgba(71, 85, 105, 1)" fontFamily="Roboto Mono">MySQL 8</span> · <span color="rgba(71, 85, 105, 1)" fontFamily="Roboto Mono">JDBC</span> · <span color="rgba(71, 85, 105, 1)" fontFamily="Roboto Mono">Maven</span></p>
+        </content>
+      </shape>
+    </data>
+    <note id="bQK">
+      <content>
+        <p>本页说明项目的出发点与目标。传统体检流程依赖纸质与人工，效率低且容易出错，因此我们设计了这个桌面端管理系统。</p>
+        <p>设计目标有三点：数据统一管理、双角色协同、结构可维护，这也是后续页面展开的主线。</p>
+        <p>技术选型上，界面使用 Java Swing，数据存储使用 MySQL，通过 JDBC 连接，工程采用 Maven 管理。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjg">
+    <style>
+      <fill id="fjg">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bQL">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>02 · 功能总览</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bQS">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>03</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bQU">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>系统功能总览</p>
+        </content>
+      </shape>
+      <line id="bQc" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <icon width="36" height="36" topLeftX="60" topLeftY="168" iconType="iconpark/Health/detection.svg" id="bPT">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="108" topLeftY="164" type="text" id="bQj">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>检查项管理</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="108" topLeftY="200" type="text" id="bQd">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>检查项目录维护，支持新增、修改、删除 · 医生</p>
+        </content>
+      </shape>
+      <icon width="36" height="36" topLeftX="500" topLeftY="168" iconType="iconpark/Edit/components.svg" id="bQn">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="548" topLeftY="164" type="text" id="bQu">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>检查组管理</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="548" topLeftY="200" type="text" id="bQh">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>将多个检查项组合为体检套餐 · 医生</p>
+        </content>
+      </shape>
+      <icon width="36" height="36" topLeftX="60" topLeftY="292" iconType="iconpark/Edit/calendar.svg" id="bQD">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="108" topLeftY="288" type="text" id="bPP">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>预约管理</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="108" topLeftY="324" type="text" id="bQB">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>选择套餐与日期提交预约，可取消预约 · 患者</p>
+        </content>
+      </shape>
+      <icon width="36" height="36" topLeftX="500" topLeftY="292" iconType="iconpark/Office/schedule.svg" id="bQp">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="548" topLeftY="288" type="text" id="bQy">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>录入结果</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="548" topLeftY="324" type="text" id="bQk">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>按患者姓名查预约，选择某次体检录入数值 · 医生</p>
+        </content>
+      </shape>
+      <icon width="36" height="36" topLeftX="60" topLeftY="416" iconType="iconpark/Charts/chart-line.svg" id="bQA">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="108" topLeftY="412" type="text" id="bQb">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>跟踪管理</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="108" topLeftY="448" type="text" id="bQH">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>历次检查结果总览，支持按检查项对比 · 患者</p>
+        </content>
+      </shape>
+      <icon width="36" height="36" topLeftX="500" topLeftY="416" iconType="iconpark/Peoples/peoples.svg" id="bQY">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="360" height="32" topLeftX="548" topLeftY="412" type="text" id="bQC">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>查看患者结果</p>
+        </content>
+      </shape>
+      <shape width="370" height="60" topLeftX="548" topLeftY="448" type="text" id="bPQ">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.3" textAlign="left">
+          <p>医生查看任意患者历次体检结果</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bQs">
+      <content>
+        <p>系统共包含六大功能，分属医生与患者两类角色。</p>
+        <p>医生侧负责检查项管理、检查组管理、录入结果和查看患者结果；患者侧负责预约和跟踪管理。</p>
+        <p>这样设计保证了业务闭环：医生先维护检查项目录，再组成套餐，患者预约后由医生录入结果，患者和医生都能查看历次跟踪。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjc">
+    <style>
+      <fill id="fjc">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bQV">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>03 · 双角色模型</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bQN">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>04</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bQr">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>医生 / 患者双角色模型</p>
+        </content>
+      </shape>
+      <line id="bQE" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <icon width="40" height="40" topLeftX="60" topLeftY="178" iconType="iconpark/Health/stethoscope.svg" id="bQi">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="300" height="40" topLeftX="112" topLeftY="176" type="text" id="bQF">
+        <content fontSize="24" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>医生视角</p>
+        </content>
+      </shape>
+      <shape width="360" height="190" topLeftX="60" topLeftY="240" type="text" id="bQq">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" list="bullet" listStyle="circle-hollow-square" textAlign="left">
+          <ul>
+            <li>
+              <p>检查项管理</p>
+            </li>
+            <li>
+              <p>检查组管理</p>
+            </li>
+            <li>
+              <p>录入结果</p>
+            </li>
+            <li>
+              <p>查看患者结果</p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <icon width="44" height="44" topLeftX="452" topLeftY="300" iconType="iconpark/Abstract/app-switch.svg" id="bQa">
+        <fill>
+          <fillColor color="rgba(0, 112, 186, 1)"/>
+        </fill>
+      </icon>
+      <shape width="110" height="32" topLeftX="420" topLeftY="356" type="text" id="bQf">
+        <content fontSize="15" fontFamily="思源黑体" color="rgba(0, 112, 186, 1)" textAlign="center" wrap="false">
+          <p>一键切换</p>
+        </content>
+      </shape>
+      <icon width="40" height="40" topLeftX="560" topLeftY="178" iconType="iconpark/Peoples/user.svg" id="bQv">
+        <fill>
+          <fillColor color="rgba(0, 112, 186, 1)"/>
+        </fill>
+      </icon>
+      <shape width="300" height="40" topLeftX="612" topLeftY="176" type="text" id="bQJ">
+        <content fontSize="24" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>患者视角</p>
+        </content>
+      </shape>
+      <shape width="340" height="190" topLeftX="560" topLeftY="240" type="text" id="bQw">
+        <content fontSize="18" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" list="bullet" listStyle="circle-hollow-square" textAlign="left">
+          <ul>
+            <li>
+              <p>预约</p>
+            </li>
+            <li>
+              <p>跟踪管理</p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <line id="bQe" startX="60" startY="470" endX="900.0005952378843" endY="470">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <shape width="840" height="44" topLeftX="60" topLeftY="486" type="text" id="bQR">
+        <content fontSize="15" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.35" textAlign="left">
+          <p>注册时可选「仅患者角色」或「双重角色（医生+患者）」；双重角色账号可在主界面右上角<strong><span color="rgba(0, 48, 135, 1)">一键切换角色</span></strong>，仅患者账号不显示该入口。</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bQl">
+      <content>
+        <p>本页介绍系统的双角色模型。账号分为医生和患者两种角色，医生拥有检查维护、结果录入等管理能力，患者则进行自助预约和结果跟踪。</p>
+        <p>注册时可以只注册患者角色，也可以注册双重角色，双重角色账号可以在主界面右上角一键切换医生与患者视角。</p>
+        <p>这样的设计让一名医生既能管理业务，也能以患者视角体验预约与跟踪流程，便于系统自测。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjG">
+    <style>
+      <fill id="fjG">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bPv">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>04 · 技术选型</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bPJ">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>05</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bPw">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>技术选型</p>
+        </content>
+      </shape>
+      <line id="bPr" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <icon width="34" height="34" topLeftX="60" topLeftY="170" iconType="iconpark/Charts/data-all.svg" id="bPt">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="220" height="40" topLeftX="108" topLeftY="166" type="text" id="bPq">
+        <content fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>MySQL 8 数据库</p>
+        </content>
+      </shape>
+      <shape width="570" height="40" topLeftX="330" topLeftY="172" type="text" id="bPa">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="left" wrap="false">
+          <p>关系型数据库，6 张业务表支撑核心数据</p>
+        </content>
+      </shape>
+      <icon width="34" height="34" topLeftX="60" topLeftY="258" iconType="iconpark/Hardware/monitor-one.svg" id="bPe">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="220" height="40" topLeftX="108" topLeftY="254" type="text" id="bPg">
+        <content fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>Java Swing 界面</p>
+        </content>
+      </shape>
+      <shape width="570" height="40" topLeftX="330" topLeftY="260" type="text" id="bPE">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="left" wrap="false">
+          <p>桌面端 GUI，自绘组件构建统一的美化视觉风格</p>
+        </content>
+      </shape>
+      <icon width="34" height="34" topLeftX="60" topLeftY="346" iconType="iconpark/Arrows/connection-arrow.svg" id="bPi">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="220" height="40" topLeftX="108" topLeftY="342" type="text" id="bPf">
+        <content fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>JDBC 数据访问</p>
+        </content>
+      </shape>
+      <shape width="570" height="40" topLeftX="330" topLeftY="348" type="text" id="bPl">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="left" wrap="false">
+          <p>数据库连接与查询统一封装于公共层，降低耦合</p>
+        </content>
+      </shape>
+      <icon width="34" height="34" topLeftX="60" topLeftY="434" iconType="iconpark/Edit/components.svg" id="bPV">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="220" height="40" topLeftX="108" topLeftY="430" type="text" id="bPN">
+        <content fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>Maven 多模块</p>
+        </content>
+      </shape>
+      <shape width="570" height="40" topLeftX="330" topLeftY="436" type="text" id="bPF">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="left" wrap="false">
+          <p>按大功能拆分 7 个模块，构建清晰、便于多人并行开发</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bPX">
+      <content>
+        <p>技术选型上我们坚持简洁、够用的原则。</p>
+        <p>数据层使用 MySQL 8，共 6 张业务表；界面层使用 Java Swing，并通过自绘组件统一美化；数据访问使用 JDBC，集中封装避免重复代码。</p>
+        <p>工程层面使用 Maven 多模块，把系统按大功能拆成 7 个模块，这是本项目在结构上最核心的设计。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjT">
+    <style>
+      <fill id="fjT">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bPA">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>05 · 项目结构</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bTt">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>06</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bTa">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>Maven 多模块项目结构</p>
+        </content>
+      </shape>
+      <line id="bPy" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <shape width="560" height="46" topLeftX="200" topLeftY="170" presetHandlers="0" type="rect" id="bPD">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="560" height="24" topLeftX="200" topLeftY="174" type="text" id="bTg">
+        <content fontSize="16" fontFamily="Roboto Mono" color="rgba(255, 255, 255, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-ui-shell</p>
+        </content>
+      </shape>
+      <shape width="560" height="18" topLeftX="200" topLeftY="198" type="text" id="bTi">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(255, 255, 255, 0.902)" textAlign="center" wrap="false">
+          <p>应用壳层：App 入口 / MainView / LoginView / RegisterDialog</p>
+        </content>
+      </shape>
+      <shape width="270" height="72" topLeftX="70" topLeftY="258" presetHandlers="0" type="rect" id="bPj">
+        <fill>
+          <fillColor color="rgba(238, 244, 251, 1)"/>
+        </fill>
+        <border color="rgba(0, 48, 135, 1)" width="1"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="270" height="24" topLeftX="70" topLeftY="264" type="text" id="bPn">
+        <content fontSize="15" fontFamily="Roboto Mono" color="rgba(0, 28, 84, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-ui-feature</p>
+        </content>
+      </shape>
+      <shape width="258" height="36" topLeftX="76" topLeftY="290" type="text" id="bPh">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.2" textAlign="center">
+          <p>功能面板：检查项 / 检查组 / 预约 / 录入 / 跟踪</p>
+        </content>
+      </shape>
+      <shape width="220" height="72" topLeftX="370" topLeftY="258" presetHandlers="0" type="rect" id="bTl">
+        <fill>
+          <fillColor color="rgba(238, 244, 251, 1)"/>
+        </fill>
+        <border color="rgba(0, 48, 135, 1)" width="1"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="220" height="24" topLeftX="370" topLeftY="264" type="text" id="bPs">
+        <content fontSize="15" fontFamily="Roboto Mono" color="rgba(0, 28, 84, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-ui-base</p>
+        </content>
+      </shape>
+      <shape width="208" height="36" topLeftX="376" topLeftY="290" type="text" id="bPS">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.2" textAlign="center" wrap="false">
+          <p>UI 主题与自绘组件（无业务依赖）</p>
+        </content>
+      </shape>
+      <shape width="270" height="72" topLeftX="620" topLeftY="258" presetHandlers="0" type="rect" id="bPc">
+        <fill>
+          <fillColor color="rgba(238, 244, 251, 1)"/>
+        </fill>
+        <border color="rgba(0, 48, 135, 1)" width="1"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="270" height="24" topLeftX="620" topLeftY="264" type="text" id="bTv">
+        <content fontSize="15" fontFamily="Roboto Mono" color="rgba(0, 28, 84, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-service</p>
+        </content>
+      </shape>
+      <shape width="258" height="36" topLeftX="626" topLeftY="290" type="text" id="bPb">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" lineSpacing="multiple:1.2" textAlign="center">
+          <p>业务逻辑：登录 / 注册校验</p>
+        </content>
+      </shape>
+      <shape width="560" height="46" topLeftX="200" topLeftY="362" presetHandlers="0" type="rect" id="bPY">
+        <fill>
+          <fillColor color="rgba(238, 244, 251, 1)"/>
+        </fill>
+        <border color="rgba(0, 48, 135, 1)" width="1"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="560" height="24" topLeftX="200" topLeftY="366" type="text" id="bPk">
+        <content fontSize="15" fontFamily="Roboto Mono" color="rgba(0, 28, 84, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-dao</p>
+        </content>
+      </shape>
+      <shape width="560" height="18" topLeftX="200" topLeftY="390" type="text" id="bTQ">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>数据访问：用户 / 检查项 / 检查组 / 预约 / 结果 5 个 DAO</p>
+        </content>
+      </shape>
+      <shape width="560" height="46" topLeftX="200" topLeftY="440" presetHandlers="0" type="rect" id="bTq">
+        <fill>
+          <fillColor color="rgba(255, 255, 255, 1)"/>
+        </fill>
+        <border color="rgba(0, 48, 135, 1)"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="560" height="24" topLeftX="200" topLeftY="444" type="text" id="bPp">
+        <content fontSize="15" fontFamily="Roboto Mono" color="rgba(0, 28, 84, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-common</p>
+        </content>
+      </shape>
+      <shape width="560" height="18" topLeftX="200" topLeftY="468" type="text" id="bPu">
+        <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>公共层：JdbcUtil / 实体 / Session / 连接配置</p>
+        </content>
+      </shape>
+      <shape width="160" height="46" topLeftX="770" topLeftY="440" presetHandlers="0" type="rect" id="bTP">
+        <fill>
+          <fillColor color="rgba(241, 245, 249, 1)"/>
+        </fill>
+        <border color="rgba(148, 163, 184, 1)" dashArray="dash" width="1"/>
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(31, 35, 41, 1)"/>
+      </shape>
+      <shape width="160" height="20" topLeftX="770" topLeftY="444" type="text" id="bTE">
+        <content fontSize="13" fontFamily="Roboto Mono" color="rgba(100, 116, 139, 1)" bold="true" textAlign="center" wrap="false">
+          <p>healthy-legacy</p>
+        </content>
+      </shape>
+      <shape width="160" height="18" topLeftX="770" topLeftY="464" type="text" id="bPd">
+        <content fontSize="11" fontFamily="思源黑体" color="rgba(148, 163, 184, 1)" textAlign="center" wrap="false">
+          <p>旧代码归档</p>
+        </content>
+      </shape>
+      <line id="bPU" startX="205.00000000000003" startY="216" endX="205.00000000000003" endY="258.0119030752">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bTT" startX="480" startY="216" endX="480" endY="258.0119030752">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bTV" startX="755" startY="216" endX="755" endY="258.0119030752">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bPL" startX="204.99999999999994" startY="330" endX="204.99999999999994" endY="362.01562118716424">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bPC" startX="755" startY="330" endX="755" endY="362.01562118716424">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bTX" startX="480" startY="408" endX="480" endY="440.01562118716424">
+        <border color="rgba(0, 112, 186, 1)"/>
+        <endArrow type="arrow"/>
+      </line>
+      <line id="bTJ" startX="770.0000000000001" startY="463" endX="761.9377422517016" endY="463">
+        <border color="rgba(148, 163, 184, 1)" dashArray="dash" width="1"/>
+        <endArrow type="arrow"/>
+      </line>
+    </data>
+    <note id="bPH">
+      <content>
+        <p>本页是项目的核心结构。我们使用 Maven 聚合工程把系统拆成 7 个模块，按依赖自底向上分层。</p>
+        <p>最底层是公共层 healthy-common，提供 JDBC 工具、实体和会话；数据访问层 healthy-dao 按大功能拆成 5 个 DAO；业务层 healthy-service 承担校验。</p>
+        <p>界面层分三块：功能面板 healthy-ui-feature、UI 组件库 healthy-ui-base 和应用壳层 healthy-ui-shell；旧的单模块代码归档到 healthy-legacy，仅作参考不参与运行。</p>
+        <p>这样每个模块职责单一、可以并行开发，修改一个模块不会影响其他模块。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjO">
+    <style>
+      <fill id="fjO">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bTM">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>06 · 数据模型</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bTj">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>07</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bTn">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>数据库设计：6 张业务表</p>
+        </content>
+      </shape>
+      <line id="bTm" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <table id="bTo" width="840" height="258" topLeftX="60" topLeftY="156">
+        <colgroup>
+          <col span="1" width="180"/>
+          <col span="1" width="230"/>
+          <col span="1" width="430"/>
+        </colgroup>
+        <tr height="30">
+          <td id="bTN">
+            <fill>
+              <fillColor color="rgba(0, 48, 135, 1)"/>
+            </fill>
+            <content fontSize="13" fontFamily="Roboto Mono" color="rgba(255, 255, 255, 1)" bold="true">
+              <p>表名</p>
+            </content>
+          </td>
+          <td id="bTK">
+            <fill>
+              <fillColor color="rgba(0, 48, 135, 1)"/>
+            </fill>
+            <content fontSize="13" fontFamily="思源黑体" color="rgba(255, 255, 255, 1)" bold="true">
+              <p>说明</p>
+            </content>
+          </td>
+          <td id="bTZ">
+            <fill>
+              <fillColor color="rgba(0, 48, 135, 1)"/>
+            </fill>
+            <content fontSize="13" fontFamily="思源黑体" color="rgba(255, 255, 255, 1)" bold="true">
+              <p>关键字段</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTb">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>users</p>
+            </content>
+          </td>
+          <td id="bTw">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>用户账号</p>
+            </content>
+          </td>
+          <td id="bTz">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>tel, pwd, name, role</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTx">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>checkitem</p>
+            </content>
+          </td>
+          <td id="bTp">
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>检查项</p>
+            </content>
+          </td>
+          <td id="bTe">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>id, name, category, price, description</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTO">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>checkgroup</p>
+            </content>
+          </td>
+          <td id="bTd">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>检查组</p>
+            </content>
+          </td>
+          <td id="bTf">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>id, name, description</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTI">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>checkgroup_item</p>
+            </content>
+          </td>
+          <td id="bTL">
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>检查组-检查项关联</p>
+            </content>
+          </td>
+          <td id="bTF">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>group_id, item_id</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTW">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>appointment</p>
+            </content>
+          </td>
+          <td id="bTH">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>预约</p>
+            </content>
+          </td>
+          <td id="bTr">
+            <fill>
+              <fillColor color="rgba(244, 248, 253, 1)"/>
+            </fill>
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>id, user_tel, group_id, exam_date, status</p>
+            </content>
+          </td>
+        </tr>
+        <tr height="38">
+          <td id="bTG">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(0, 48, 135, 1)" bold="true">
+              <p>exam_result</p>
+            </content>
+          </td>
+          <td id="bTB">
+            <content fontSize="12" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)">
+              <p>体检结果</p>
+            </content>
+          </td>
+          <td id="bTy">
+            <content fontSize="12" fontFamily="Roboto Mono" color="rgba(71, 85, 105, 1)">
+              <p>id, appointment_id, item_id, item_value, result_status</p>
+            </content>
+          </td>
+        </tr>
+      </table>
+      <shape width="840" height="40" topLeftX="60" topLeftY="436" type="text" id="bTs">
+        <content fontSize="15" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="left" wrap="false">
+          <p>外键关联形成两条主线：<strong><span color="rgba(0, 48, 135, 1)">用户 → 预约 → 结果</span></strong>、<strong><span color="rgba(0, 48, 135, 1)">检查组 → 检查项</span></strong>。</p>
+        </content>
+      </shape>
+      <shape width="840" height="36" topLeftX="60" topLeftY="486" type="text" id="bTS">
+        <content fontSize="14" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>数据初始化脚本：resources/init.sql</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bTR">
+      <content>
+        <p>数据库共 6 张表。用户表存账号与角色，检查项和检查组通过关联表组成套餐，预约记录患者、套餐与日期，结果表记录每次体检各检查项的数值与状态。</p>
+        <p>外键关系构成两条主线：用户到预约到结果，以及检查组到检查项，保证体检业务流程的完整性。</p>
+        <p>建表与种子数据统一放在 resources/init.sql 中，便于初始化环境。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjE">
+    <style>
+      <fill id="fjE">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bPK">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>07 · 界面展示</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bPG">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>08</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bPo">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>系统界面展示</p>
+        </content>
+      </shape>
+      <line id="bPx" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <img id="bPI" src="Rd7wb8WYso1hdtxpsw5cJZofnzc" width="272" height="170" topLeftX="129" topLeftY="148">
+        <crop leftOffset="0" rightOffset="0" topOffset="0" bottomOffset="0"/>
+      </img>
+      <shape width="272" height="20" topLeftX="129" topLeftY="322" type="text" id="bPB">
+        <content fontSize="13" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>登录界面</p>
+        </content>
+      </shape>
+      <img id="bPm" src="MW0ybIUkPofjXfxK11dchNALnOb" width="174" height="170" topLeftX="608" topLeftY="148">
+        <crop type="rect" leftOffset="0" rightOffset="-2.842170943040401e-14" topOffset="0.022727272727252057" bottomOffset="0.022727272727252057"/>
+      </img>
+      <shape width="174" height="20" topLeftX="608" topLeftY="322" type="text" id="bPz">
+        <content fontSize="13" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>注册 · 角色选择</p>
+        </content>
+      </shape>
+      <img id="bPM" src="C3pQbmjO7o1CTCxjupkccDpUnEc" width="248" height="170" topLeftX="141" topLeftY="350">
+        <crop type="rect" leftOffset="0" rightOffset="0" topOffset="0.09803921568629903" bottomOffset="0.09803921568627061"/>
+      </img>
+      <shape width="248" height="20" topLeftX="141" topLeftY="520" type="text" id="bPZ">
+        <content fontSize="13" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>医生端 · 检查项管理</p>
+        </content>
+      </shape>
+      <img id="bPO" src="DDyabIgmoolyaSxv6w1cLa8dnTg" width="248" height="170" topLeftX="571" topLeftY="350">
+        <crop type="rect" leftOffset="0" rightOffset="0" topOffset="0.09803921568629903" bottomOffset="0.09803921568627061"/>
+      </img>
+      <shape width="248" height="20" topLeftX="571" topLeftY="520" type="text" id="bPW">
+        <content fontSize="13" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" textAlign="center" wrap="false">
+          <p>患者端 · 跟踪管理</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bPR">
+      <content>
+        <p>这是系统的实际运行界面，采用统一的现代美颜风格。</p>
+        <p>登录界面是浅蓝渐变卡片式设计；注册界面可以选择仅患者角色或双重角色。</p>
+        <p>医生端以四个标签页组织检查项管理、检查组管理、录入结果和查看患者结果；患者端以两个标签页组织预约和跟踪管理，跟踪管理展示历次检查结果。</p>
+        <p>截图均来自系统真实运行时的数据渲染。</p>
+      </content>
+    </note>
+  </slide>
+  <slide id="pjJ">
+    <style>
+      <fill id="fjJ">
+        <fillColor color="rgba(255, 255, 255, 1)"/>
+      </fill>
+    </style>
+    <data>
+      <shape width="400" height="28" topLeftX="60" topLeftY="28" type="text" id="bTk">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="left" wrap="false">
+          <p>08 · 总结与展望</p>
+        </content>
+      </shape>
+      <shape width="40" height="28" topLeftX="880" topLeftY="28" type="text" id="bTU">
+        <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100, 116, 139, 1)" textAlign="right" wrap="false">
+          <p>09</p>
+        </content>
+      </shape>
+      <shape width="840" height="52" topLeftX="60" topLeftY="72" type="text" id="bTA">
+        <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0, 28, 84, 1)" bold="true" textAlign="left" wrap="false">
+          <p>总结与展望</p>
+        </content>
+      </shape>
+      <line id="bTh" startX="60" startY="132" endX="900.0005952378843" endY="132">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <icon width="34" height="34" topLeftX="60" topLeftY="164" iconType="iconpark/Character/check-one.svg" id="bXQ">
+        <fill>
+          <fillColor color="rgba(0, 48, 135, 1)"/>
+        </fill>
+      </icon>
+      <shape width="300" height="40" topLeftX="104" topLeftY="160" type="text" id="bXT">
+        <content fontSize="21" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>成果总结</p>
+        </content>
+      </shape>
+      <shape width="380" height="210" topLeftX="104" topLeftY="210" type="text" id="bTu">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" list="bullet" listStyle="circle-hollow-square" textAlign="left">
+          <ul>
+            <li>
+              <p>完成体检业务全流程：检查项 / 检查组维护、预约、结果录入与跟踪</p>
+            </li>
+            <li>
+              <p>医生与患者双角色协同，支持一键切换视角</p>
+            </li>
+            <li>
+              <p>Maven 多模块架构，模块职责单一、可多人并行开发</p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <icon width="34" height="34" topLeftX="540" topLeftY="164" iconType="iconpark/Base/aiming.svg" id="bTC">
+        <fill>
+          <fillColor color="rgba(0, 112, 186, 1)"/>
+        </fill>
+      </icon>
+      <shape width="300" height="40" topLeftX="584" topLeftY="160" type="text" id="bTD">
+        <content fontSize="21" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" bold="true" textAlign="left" wrap="false">
+          <p>后续展望</p>
+        </content>
+      </shape>
+      <shape width="340" height="160" topLeftX="584" topLeftY="210" type="text" id="bTc">
+        <content fontSize="16" fontFamily="思源黑体" color="rgba(71, 85, 105, 1)" list="bullet" listStyle="circle-hollow-square" textAlign="left">
+          <ul>
+            <li>
+              <p>增加体检统计报表与健康建议生成</p>
+            </li>
+            <li>
+              <p>演进为 C/S 网络化部署，支持多终端访问</p>
+            </li>
+          </ul>
+        </content>
+      </shape>
+      <line id="bXP" startX="60" startY="470" endX="900.0005952378843" endY="470">
+        <border color="rgba(212, 229, 247, 1)" width="1"/>
+      </line>
+      <shape width="840" height="40" topLeftX="60" topLeftY="486" type="text" id="bXX">
+        <content fontSize="20" fontFamily="思源黑体" color="rgba(0, 48, 135, 1)" textAlign="center" wrap="false">
+          <p>感谢聆听，恳请各位老师批评指正</p>
+        </content>
+      </shape>
+    </data>
+    <note id="bTY">
+      <content>
+        <p>最后做一下总结。系统完整实现了体检中心的业务闭环，从检查项维护到结果跟踪，覆盖医生与患者两类角色的使用场景。</p>
+        <p>工程上采用 Maven 多模块架构，7 个模块职责单一、依赖清晰，支持多人并行开发，可维护性明显优于单模块实现。</p>
+        <p>展望方面，后续可以补充统计报表与健康建议，并把系统演进为网络化部署形态，支持更多使用场景。</p>
+        <p>我的汇报到此结束，感谢各位老师，欢迎批评指正。</p>
+      </content>
+    </note>
+  </slide>
+</presentation>

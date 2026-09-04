@@ -1,0 +1,90 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>04 · 技术选型</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>05</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>技术选型</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <icon iconType="iconpark/Charts/data-all.svg" topLeftX="60" topLeftY="170" width="34" height="34">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="166" width="220" height="40">
+      <content textType="body" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>MySQL 8 数据库</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="330" topLeftY="172" width="570" height="40">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" wrap="false">
+        <p>关系型数据库，6 张业务表支撑核心数据</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Hardware/monitor-one.svg" topLeftX="60" topLeftY="258" width="34" height="34">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="254" width="220" height="40">
+      <content textType="body" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>Java Swing 界面</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="330" topLeftY="260" width="570" height="40">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" wrap="false">
+        <p>桌面端 GUI，自绘组件构建统一的美化视觉风格</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Arrows/connection-arrow.svg" topLeftX="60" topLeftY="346" width="34" height="34">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="342" width="220" height="40">
+      <content textType="body" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>JDBC 数据访问</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="330" topLeftY="348" width="570" height="40">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" wrap="false">
+        <p>数据库连接与查询统一封装于公共层，降低耦合</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Edit/components.svg" topLeftX="60" topLeftY="434" width="34" height="34">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="430" width="220" height="40">
+      <content textType="body" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>Maven 多模块</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="330" topLeftY="436" width="570" height="40">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" wrap="false">
+        <p>按大功能拆分 7 个模块，构建清晰、便于多人并行开发</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>技术选型上我们坚持简洁、够用的原则。</p>
+      <p>数据层使用 MySQL 8，共 6 张业务表；界面层使用 Java Swing，并通过自绘组件统一美化；数据访问使用 JDBC，集中封装避免重复代码。</p>
+      <p>工程层面使用 Maven 多模块，把系统按大功能拆成 7 个模块，这是本项目在结构上最核心的设计。</p>
+    </content>
+  </note>
+</slide>

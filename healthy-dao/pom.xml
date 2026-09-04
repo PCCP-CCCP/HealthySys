@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-dao 数据访问层模块 POM
+  定位：负责与数据库交互，按"大功能"拆分出五个 DAO：
+       UserDao（用户/登录注册）、CheckItemDao（检查项）、
+       CheckGroupDao（检查组）、AppointmentDao（预约）、ExamResultDao（检查结果）。
+  仅依赖 healthy-common（实体 + JDBC 工具），不含任何界面逻辑。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-dao</artifactId>
+    <name>healthy-dao</name>
+    <description>数据访问层：按功能拆分的 DAO（用户/检查项/检查组/预约/结果）</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-common</artifactId>
+        </dependency>
+    </dependencies>
+</project>

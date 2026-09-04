@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-service 业务逻辑层模块 POM
+  定位：承载业务校验与流程编排，目前包含用户登录/注册校验（UserService）。
+  依赖 healthy-dao（数据访问）与 healthy-common（实体）。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-service</artifactId>
+    <name>healthy-service</name>
+    <description>业务逻辑层：登录注册等业务校验</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-dao</artifactId>
+        </dependency>
+    </dependencies>
+</project>

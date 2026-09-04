@@ -1,0 +1,63 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>07 · 界面展示</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>08</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>系统界面展示</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <img src="Rd7wb8WYso1hdtxpsw5cJZofnzc" topLeftX="129" topLeftY="148" width="272" height="170"/>
+    <shape type="text" topLeftX="129" topLeftY="322" width="272" height="20">
+      <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>登录界面</p>
+      </content>
+    </shape>
+
+    <img src="MW0ybIUkPofjXfxK11dchNALnOb" topLeftX="608" topLeftY="148" width="174" height="170"/>
+    <shape type="text" topLeftX="608" topLeftY="322" width="174" height="20">
+      <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>注册 · 角色选择</p>
+      </content>
+    </shape>
+
+    <img src="C3pQbmjO7o1CTCxjupkccDpUnEc" topLeftX="141" topLeftY="350" width="248" height="170"/>
+    <shape type="text" topLeftX="141" topLeftY="520" width="248" height="20">
+      <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>医生端 · 检查项管理</p>
+      </content>
+    </shape>
+
+    <img src="DDyabIgmoolyaSxv6w1cLa8dnTg" topLeftX="571" topLeftY="350" width="248" height="170"/>
+    <shape type="text" topLeftX="571" topLeftY="520" width="248" height="20">
+      <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>患者端 · 跟踪管理</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>这是系统的实际运行界面，采用统一的现代美颜风格。</p>
+      <p>登录界面是浅蓝渐变卡片式设计；注册界面可以选择仅患者角色或双重角色。</p>
+      <p>医生端以四个标签页组织检查项管理、检查组管理、录入结果和查看患者结果；患者端以两个标签页组织预约和跟踪管理，跟踪管理展示历次检查结果。</p>
+      <p>截图均来自系统真实运行时的数据渲染。</p>
+    </content>
+  </note>
+</slide>

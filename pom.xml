@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  体检中心管理系统（HealthySys）—— Maven 多模块聚合工程根 POM
+  =====================================================================
+  定位：本文件只是"聚合 + 统一依赖版本"的父工程，不含任何业务代码。
+  真正的业务代码按"大功能"拆分到以下 7 个模块（详见各模块 README）：
+
+    healthy-common   公共模块：数据库连接、JDBC 工具、实体类、会话
+    healthy-dao      数据访问层：按功能拆分的 DAO（用户/检查项/检查组/预约/结果）
+    healthy-service  业务逻辑层：登录注册等业务校验
+    healthy-ui-base  UI 基础模块：主题配色与自绘组件（现代医疗风）
+    healthy-ui-feature 功能界面模块：各业务面板与对话框
+    healthy-ui-shell 应用外壳模块：主界面/登录/注册/启动入口
+    healthy-legacy   遗留代码模块：旧版未启用代码（仅保留参考，不参与主流程）
+
+  多人协作约定：每个模块可由一位开发者独立负责，模块间通过依赖关系协作，
+  接口（类/方法签名）一旦确定，各模块可并行开发，互不阻塞。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.nd</groupId>
+    <artifactId>healthysys</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>HealthySys</name>
+    <description>体检中心管理系统（Java Swing + MySQL 多模块聚合工程）</description>
+
+    <!-- 聚合的 7 个子模块 -->
+    <modules>
+        <module>healthy-common</module>
+        <module>healthy-dao</module>
+        <module>healthy-service</module>
+        <module>healthy-ui-base</module>
+        <module>healthy-ui-feature</module>
+        <module>healthy-ui-shell</module>
+        <module>healthy-legacy</module>
+    </modules>
+
+    <properties>
+        <!-- 统一 Java 编译级别（JDK 25 向下兼容） -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <!-- 统一源码编码，保证中文注释/字符串不乱码 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- 内部模块统一版本号 -->
+        <nd.version>1.0.0</nd.version>
+    </properties>
+
+    <!-- 统一管理内部模块与第三方依赖版本，子模块只声明、不写版本号 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-common</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-dao</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-service</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-ui-base</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-ui-feature</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-ui-shell</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nd</groupId>
+                <artifactId>healthy-legacy</artifactId>
+                <version>${nd.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

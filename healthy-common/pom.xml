@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-common 公共模块 POM
+  定位：被所有模块依赖的基础模块，不含任何界面代码。
+  包含：数据库连接配置（DBConfig）、JDBC 工具（JdbcUtil）、
+       四个业务实体（CheckItem/CheckGroup/Appointment/ExamResult）、会话（Session）。
+  本模块是唯一直接使用 MySQL 驱动的模块（system scope 引用项目根 lib/ 下的本地 jar）。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-common</artifactId>
+    <name>healthy-common</name>
+    <description>公共模块：数据库连接、JDBC 工具、实体类、会话</description>
+
+    <dependencies>
+        <!-- MySQL 连接驱动：system scope 指向项目根 lib/ 下的本地 jar -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.14</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/mysql-connector-java-8.0.14.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>

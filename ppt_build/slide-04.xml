@@ -1,0 +1,88 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>03 · 双角色模型</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>04</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>医生 / 患者双角色模型</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <icon iconType="iconpark/Health/stethoscope.svg" topLeftX="60" topLeftY="178" width="40" height="40">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="112" topLeftY="176" width="300" height="40">
+      <content textType="body" fontSize="24" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>医生视角</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="240" width="360" height="190">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.5">
+        <ul>
+          <li><p>检查项管理</p></li>
+          <li><p>检查组管理</p></li>
+          <li><p>录入结果</p></li>
+          <li><p>查看患者结果</p></li>
+        </ul>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Abstract/app-switch.svg" topLeftX="452" topLeftY="300" width="44" height="44">
+      <fill><fillColor color="rgba(0,112,186,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="420" topLeftY="356" width="110" height="32">
+      <content textType="body" fontSize="15" fontFamily="思源黑体" color="rgba(0,112,186,1)" textAlign="center" wrap="false">
+        <p>一键切换</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Peoples/user.svg" topLeftX="560" topLeftY="178" width="40" height="40">
+      <fill><fillColor color="rgba(0,112,186,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="612" topLeftY="176" width="300" height="40">
+      <content textType="body" fontSize="24" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>患者视角</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="560" topLeftY="240" width="340" height="190">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.5">
+        <ul>
+          <li><p>预约</p></li>
+          <li><p>跟踪管理</p></li>
+        </ul>
+      </content>
+    </shape>
+
+    <line startX="60" startY="470" endX="900" endY="470">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+    <shape type="text" topLeftX="60" topLeftY="486" width="840" height="44">
+      <content textType="body" fontSize="15" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.35">
+        <p>注册时可选「仅患者角色」或「双重角色（医生+患者）」；双重角色账号可在主界面右上角<span bold="true" color="rgba(0,48,135,1)">一键切换角色</span>，仅患者账号不显示该入口。</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>本页介绍系统的双角色模型。账号分为医生和患者两种角色，医生拥有检查维护、结果录入等管理能力，患者则进行自助预约和结果跟踪。</p>
+      <p>注册时可以只注册患者角色，也可以注册双重角色，双重角色账号可以在主界面右上角一键切换医生与患者视角。</p>
+      <p>这样的设计让一名医生既能管理业务，也能以患者视角体验预约与跟踪流程，便于系统自测。</p>
+    </content>
+  </note>
+</slide>

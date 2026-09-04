@@ -1,0 +1,67 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>01 · 项目背景与设计目标</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>02</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>项目背景与设计目标</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+    <shape type="text" topLeftX="60" topLeftY="168" width="400" height="40">
+      <content textType="sub-headline" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" wrap="false">
+        <p>项目背景</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="216" width="400" height="220">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.4">
+        <p>传统体检中心在检查项维护、体检预约、结果记录等环节依赖纸质单据与人工登记，存在易错、难追溯、协作成本高等问题。</p>
+        <p>本项目以桌面端管理软件为载体，将检查项与检查组维护、患者预约、医生录入结果、历次跟踪统一纳入一个系统，实现体检业务的信息化管理。</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="500" topLeftY="168" width="400" height="40">
+      <content textType="sub-headline" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" wrap="false">
+        <p>设计目标</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="500" topLeftY="216" width="410" height="220">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.45">
+        <ul>
+          <li><p>数据统一管理：检查项、检查组、预约、结果集中入库，全程可追溯</p></li>
+          <li><p>双角色协同：医生负责维护与录入，患者自助预约并查看跟踪</p></li>
+          <li><p>结构可维护：按大功能拆分 Maven 多模块，便于多人并行开发</p></li>
+        </ul>
+      </content>
+    </shape>
+    <line startX="60" startY="470" endX="900" endY="470">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+    <shape type="text" topLeftX="60" topLeftY="486" width="840" height="36">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" wrap="false">
+        <p>技术选型：<span fontFamily="Roboto Mono" color="rgba(71,85,105,1)">Java Swing</span> · <span fontFamily="Roboto Mono" color="rgba(71,85,105,1)">MySQL 8</span> · <span fontFamily="Roboto Mono" color="rgba(71,85,105,1)">JDBC</span> · <span fontFamily="Roboto Mono" color="rgba(71,85,105,1)">Maven</span></p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>本页说明项目的出发点与目标。传统体检流程依赖纸质与人工，效率低且容易出错，因此我们设计了这个桌面端管理系统。</p>
+      <p>设计目标有三点：数据统一管理、双角色协同、结构可维护，这也是后续页面展开的主线。</p>
+      <p>技术选型上，界面使用 Java Swing，数据存储使用 MySQL，通过 JDBC 连接，工程采用 Maven 管理。</p>
+    </content>
+  </note>
+</slide>

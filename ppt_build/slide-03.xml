@@ -1,0 +1,118 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>02 · 功能总览</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>03</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>系统功能总览</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <icon iconType="iconpark/Health/detection.svg" topLeftX="60" topLeftY="168" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="164" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>检查项管理</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="108" topLeftY="200" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>检查项目录维护，支持新增、修改、删除 · 医生</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Edit/components.svg" topLeftX="500" topLeftY="168" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="548" topLeftY="164" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>检查组管理</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="548" topLeftY="200" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>将多个检查项组合为体检套餐 · 医生</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Edit/calendar.svg" topLeftX="60" topLeftY="292" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="288" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>预约管理</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="108" topLeftY="324" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>选择套餐与日期提交预约，可取消预约 · 患者</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Office/schedule.svg" topLeftX="500" topLeftY="292" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="548" topLeftY="288" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>录入结果</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="548" topLeftY="324" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>按患者姓名查预约，选择某次体检录入数值 · 医生</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Charts/chart-line.svg" topLeftX="60" topLeftY="416" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="108" topLeftY="412" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>跟踪管理</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="108" topLeftY="448" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>历次检查结果总览，支持按检查项对比 · 患者</p>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Peoples/peoples.svg" topLeftX="500" topLeftY="416" width="36" height="36">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="548" topLeftY="412" width="360" height="32">
+      <content textType="body" fontSize="18" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>查看患者结果</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="548" topLeftY="448" width="370" height="60">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.3">
+        <p>医生查看任意患者历次体检结果</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>系统共包含六大功能，分属医生与患者两类角色。</p>
+      <p>医生侧负责检查项管理、检查组管理、录入结果和查看患者结果；患者侧负责预约和跟踪管理。</p>
+      <p>这样设计保证了业务闭环：医生先维护检查项目录，再组成套餐，患者预约后由医生录入结果，患者和医生都能查看历次跟踪。</p>
+    </content>
+  </note>
+</slide>

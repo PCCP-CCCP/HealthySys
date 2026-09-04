@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-ui-base UI 基础模块 POM
+  定位：现代医疗风 UI 的"基建"，不依赖任何业务类。
+  包含：主题配色与全局样式（UITheme）、自绘圆角渐变按钮（ModernButtonUI）、
+       胶囊导航 Tab（ModernTabbedPaneUI）、渐变面板/圆角卡片/圆角输入框等组件，
+       以及 UI 使用的图片素材（src/main/resources）。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-ui-base</artifactId>
+    <name>healthy-ui-base</name>
+    <description>UI 基础模块：主题配色与自绘组件（现代医疗风）</description>
+</project>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-ui-feature 功能界面模块 POM
+  定位：各"大功能"的业务界面（面板 + 对话框），按功能分包存放：
+       checkitem（检查项管理）、checkgroup（检查组管理）、
+       appointment（预约）、record（录入结果）、tracking（跟踪/查看患者结果）、
+       profile（个人信息管理）。
+  依赖 healthy-common（实体/会话）、healthy-ui-base（UI 组件）、healthy-dao（数据访问）、
+       healthy-service（业务逻辑，个人信息/改密等面板调用）。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-ui-feature</artifactId>
+    <name>healthy-ui-feature</name>
+    <description>功能界面模块：各业务面板与对话框</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-ui-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-service</artifactId>
+        </dependency>
+    </dependencies>
+</project>

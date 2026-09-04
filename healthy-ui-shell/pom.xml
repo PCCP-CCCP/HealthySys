@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-ui-shell 应用外壳模块 POM
+  定位：应用入口与整体框架，负责角色导航、一键切换角色、登录/注册流程。
+  包含：MainView（主界面）、LoginView（登录）、RegisterDialog（注册）、App（启动入口）。
+  依赖全部业务模块；运行主类：com.nd.ui.shell.App。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-ui-shell</artifactId>
+    <name>healthy-ui-shell</name>
+    <description>应用外壳模块：主界面/登录/注册/启动入口</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-ui-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-ui-feature</artifactId>
+        </dependency>
+        <!-- 运行期需要 MySQL 驱动在 classpath 上 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.14</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../lib/mysql-connector-java-8.0.14.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>

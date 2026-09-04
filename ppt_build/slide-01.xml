@@ -1,0 +1,41 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="linear-gradient(135deg,rgba(0,48,135,1) 0%,rgba(0,112,186,1) 100%)"/>
+    </fill>
+  </style>
+  <data>
+    <icon iconType="iconpark/Health/red-cross.svg" topLeftX="80" topLeftY="78" width="56" height="56">
+      <fill>
+        <fillColor color="rgba(255,255,255,1)"/>
+      </fill>
+    </icon>
+    <shape type="text" topLeftX="80" topLeftY="168" width="820" height="110">
+      <content textType="title" fontSize="56" fontFamily="思源黑体" color="rgba(255,255,255,1)" textAlign="left" wrap="false" letterSpacing="2">
+        <p>体检中心管理系统</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="80" topLeftY="272" width="840" height="56">
+      <content textType="sub-headline" fontSize="24" fontFamily="思源黑体" color="rgba(255,255,255,0.95)" textAlign="left" wrap="false">
+        <p>HealthySys · 基于 Java Swing + MySQL 的桌面端体检管理系统</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="82" topLeftY="352" width="840" height="44">
+      <content textType="body" fontSize="17" fontFamily="思源黑体" color="rgba(255,255,255,0.85)" textAlign="left" wrap="false">
+        <p>多角色协同 · 体检业务全流程管理 · Maven 多模块工程</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="80" topLeftY="468" width="840" height="40">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(255,255,255,0.8)" textAlign="left" wrap="false">
+        <p>项目答辩    答辩人：____________    日期：2026-09-04    V1.0</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>各位老师好，我今天答辩的项目是体检中心管理系统，代号 HealthySys，是一款基于 Java Swing 和 MySQL 的桌面端体检业务管理系统。</p>
+      <p>系统面向体检中心的医生和患者两类用户，覆盖检查项、检查组、预约、结果录入与跟踪等核心业务，并采用 Maven 多模块工程组织代码。</p>
+      <p>本页封面信息中的答辩人姓名可按实际情况填写。</p>
+    </content>
+  </note>
+</slide>

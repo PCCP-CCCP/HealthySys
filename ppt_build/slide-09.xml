@@ -1,0 +1,79 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>08 · 总结与展望</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>09</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>总结与展望</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <icon iconType="iconpark/Character/check-one.svg" topLeftX="60" topLeftY="164" width="34" height="34">
+      <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="104" topLeftY="160" width="300" height="40">
+      <content textType="body" fontSize="21" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>成果总结</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="104" topLeftY="210" width="380" height="210">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.5">
+        <ul>
+          <li><p>完成体检业务全流程：检查项 / 检查组维护、预约、结果录入与跟踪</p></li>
+          <li><p>医生与患者双角色协同，支持一键切换视角</p></li>
+          <li><p>Maven 多模块架构，模块职责单一、可多人并行开发</p></li>
+        </ul>
+      </content>
+    </shape>
+
+    <icon iconType="iconpark/Base/aiming.svg" topLeftX="540" topLeftY="164" width="34" height="34">
+      <fill><fillColor color="rgba(0,112,186,1)"/></fill>
+    </icon>
+    <shape type="text" topLeftX="584" topLeftY="160" width="300" height="40">
+      <content textType="body" fontSize="21" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="left" bold="true" wrap="false">
+        <p>后续展望</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="584" topLeftY="210" width="340" height="160">
+      <content textType="body" fontSize="16" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" lineSpacing="multiple:1.5">
+        <ul>
+          <li><p>增加体检统计报表与健康建议生成</p></li>
+          <li><p>演进为 C/S 网络化部署，支持多终端访问</p></li>
+        </ul>
+      </content>
+    </shape>
+
+    <line startX="60" startY="470" endX="900" endY="470">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+    <shape type="text" topLeftX="60" topLeftY="486" width="840" height="40">
+      <content textType="body" fontSize="20" fontFamily="思源黑体" color="rgba(0,48,135,1)" textAlign="center" wrap="false">
+        <p>感谢聆听，恳请各位老师批评指正</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>最后做一下总结。系统完整实现了体检中心的业务闭环，从检查项维护到结果跟踪，覆盖医生与患者两类角色的使用场景。</p>
+      <p>工程上采用 Maven 多模块架构，7 个模块职责单一、依赖清晰，支持多人并行开发，可维护性明显优于单模块实现。</p>
+      <p>展望方面，后续可以补充统计报表与健康建议，并把系统演进为网络化部署形态，支持更多使用场景。</p>
+      <p>我的汇报到此结束，感谢各位老师，欢迎批评指正。</p>
+    </content>
+  </note>
+</slide>

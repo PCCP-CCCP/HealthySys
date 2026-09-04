@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="healthy-ui-feature" />
+        <module name="healthy-legacy" />
+        <module name="healthy-service" />
+        <module name="healthy-ui-base" />
+        <module name="healthy-ui-shell" />
+        <module name="healthy-common" />
+        <module name="healthy-dao" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

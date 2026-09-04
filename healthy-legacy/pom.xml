@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  healthy-legacy 遗留代码模块 POM
+  定位：收纳"旧版、未被当前主程序引用"的代码，仅保留参考价值，不参与主流程。
+  包含：旧版检查项实体/DAO/Service、废弃的主页 IndexView、测试入口 Demo。
+  依赖 healthy-common（旧代码使用其中的 JDBC 工具）。
+  注意：此模块不进入 healthy-ui-shell 的依赖，避免历史坏味道影响新架构。
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.nd</groupId>
+        <artifactId>healthysys</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>healthy-legacy</artifactId>
+    <name>healthy-legacy</name>
+    <description>遗留代码模块：旧版未启用代码（仅保留参考）</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.nd</groupId>
+            <artifactId>healthy-common</artifactId>
+        </dependency>
+    </dependencies>
+</project>

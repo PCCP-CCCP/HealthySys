@@ -1,0 +1,182 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>05 · 项目结构</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>06</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>Maven 多模块项目结构</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <shape type="rect" topLeftX="200" topLeftY="170" width="560" height="46">
+      <fill>
+        <fillColor color="rgba(0,48,135,1)"/>
+      </fill>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="174" width="560" height="24">
+      <content textType="body" fontSize="16" fontFamily="Roboto Mono" color="rgba(255,255,255,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-ui-shell</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="198" width="560" height="18">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(255,255,255,0.9)" textAlign="center" wrap="false">
+        <p>应用壳层：App 入口 / MainView / LoginView / RegisterDialog</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="70" topLeftY="258" width="270" height="72">
+      <fill>
+        <fillColor color="rgba(238,244,251,1)"/>
+      </fill>
+      <border color="rgb(0,48,135)" width="1"/>
+    </shape>
+    <shape type="text" topLeftX="70" topLeftY="264" width="270" height="24">
+      <content textType="body" fontSize="15" fontFamily="Roboto Mono" color="rgba(0,28,84,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-ui-feature</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="76" topLeftY="290" width="258" height="36">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" lineSpacing="multiple:1.2">
+        <p>功能面板：检查项 / 检查组 / 预约 / 录入 / 跟踪</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="370" topLeftY="258" width="220" height="72">
+      <fill>
+        <fillColor color="rgba(238,244,251,1)"/>
+      </fill>
+      <border color="rgb(0,48,135)" width="1"/>
+    </shape>
+    <shape type="text" topLeftX="370" topLeftY="264" width="220" height="24">
+      <content textType="body" fontSize="15" fontFamily="Roboto Mono" color="rgba(0,28,84,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-ui-base</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="376" topLeftY="290" width="208" height="36">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" lineSpacing="multiple:1.2" wrap="false">
+        <p>UI 主题与自绘组件（无业务依赖）</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="620" topLeftY="258" width="270" height="72">
+      <fill>
+        <fillColor color="rgba(238,244,251,1)"/>
+      </fill>
+      <border color="rgb(0,48,135)" width="1"/>
+    </shape>
+    <shape type="text" topLeftX="620" topLeftY="264" width="270" height="24">
+      <content textType="body" fontSize="15" fontFamily="Roboto Mono" color="rgba(0,28,84,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-service</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="626" topLeftY="290" width="258" height="36">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" lineSpacing="multiple:1.2">
+        <p>业务逻辑：登录 / 注册校验</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="200" topLeftY="362" width="560" height="46">
+      <fill>
+        <fillColor color="rgba(238,244,251,1)"/>
+      </fill>
+      <border color="rgb(0,48,135)" width="1"/>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="366" width="560" height="24">
+      <content textType="body" fontSize="15" fontFamily="Roboto Mono" color="rgba(0,28,84,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-dao</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="390" width="560" height="18">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>数据访问：用户 / 检查项 / 检查组 / 预约 / 结果 5 个 DAO</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="200" topLeftY="440" width="560" height="46">
+      <fill>
+        <fillColor color="rgb(255,255,255)"/>
+      </fill>
+      <border color="rgb(0,48,135)" width="2"/>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="444" width="560" height="24">
+      <content textType="body" fontSize="15" fontFamily="Roboto Mono" color="rgba(0,28,84,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-common</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="200" topLeftY="468" width="560" height="18">
+      <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center" wrap="false">
+        <p>公共层：JdbcUtil / 实体 / Session / 连接配置</p>
+      </content>
+    </shape>
+
+    <shape type="rect" topLeftX="770" topLeftY="440" width="160" height="46">
+      <fill>
+        <fillColor color="rgba(241,245,249,1)"/>
+      </fill>
+      <border color="rgb(148,163,184)" width="1" dashArray="dash"/>
+    </shape>
+    <shape type="text" topLeftX="770" topLeftY="444" width="160" height="20">
+      <content textType="body" fontSize="13" fontFamily="Roboto Mono" color="rgba(100,116,139,1)" textAlign="center" bold="true" wrap="false">
+        <p>healthy-legacy</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="770" topLeftY="464" width="160" height="18">
+      <content textType="body" fontSize="11" fontFamily="思源黑体" color="rgba(148,163,184,1)" textAlign="center" wrap="false">
+        <p>旧代码归档</p>
+      </content>
+    </shape>
+
+    <line startX="205" startY="216" endX="205" endY="258">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="480" startY="216" endX="480" endY="258">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="755" startY="216" endX="755" endY="258">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="205" startY="330" endX="205" endY="362">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="755" startY="330" endX="755" endY="362">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="480" startY="408" endX="480" endY="440">
+      <border color="rgb(0,112,186)" width="2"/>
+      <endArrow type="arrow"/>
+    </line>
+    <line startX="770" startY="463" endX="762" endY="463">
+      <border color="rgb(148,163,184)" width="1" dashArray="dash"/>
+      <endArrow type="arrow"/>
+    </line>
+  </data>
+  <note>
+    <content textType="body">
+      <p>本页是项目的核心结构。我们使用 Maven 聚合工程把系统拆成 7 个模块，按依赖自底向上分层。</p>
+      <p>最底层是公共层 healthy-common，提供 JDBC 工具、实体和会话；数据访问层 healthy-dao 按大功能拆成 5 个 DAO；业务层 healthy-service 承担校验。</p>
+      <p>界面层分三块：功能面板 healthy-ui-feature、UI 组件库 healthy-ui-base 和应用壳层 healthy-ui-shell；旧的单模块代码归档到 healthy-legacy，仅作参考不参与运行。</p>
+      <p>这样每个模块职责单一、可以并行开发，修改一个模块不会影响其他模块。</p>
+    </content>
+  </note>
+</slide>

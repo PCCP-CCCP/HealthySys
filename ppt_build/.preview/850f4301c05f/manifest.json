@@ -1,0 +1,35 @@
+{
+  "schema_version": "1",
+  "source_path": "C:\\Users\\youlh\\Desktop\\HealthySys\\ppt_build\\exports\\体检中心管理系统-项目答辩.pptx",
+  "source_filename": "体检中心管理系统-项目答辩.pptx",
+  "source_hash": "850f4301c05f",
+  "source_size_bytes": 363678,
+  "kind": "pptx",
+  "rendered_at_utc": "2026-09-03T11:33:07+00:00",
+  "output_dir": "C:\\Users\\youlh\\Desktop\\HealthySys\\ppt_build\\.preview\\850f4301c05f",
+  "page_count": 0,
+  "rendered_page_count": 0,
+  "collage_count": 0,
+  "extracted_text_chars": 0,
+  "text_relpath": null,
+  "thumbnail_relpath": null,
+  "pages": [],
+  "collages": [],
+  "warnings": [
+    "pptx parse produced no slides or text",
+    "pptx render: LibreOffice not found. Looked for soffice.com, soffice, libreoffice on PATH plus the standard install locations for this platform. Install it: `winget install --id TheDocumentFoundation.LibreOffice -e`. If it is already installed but off PATH (the usual case on Windows and macOS), point --soffice / $ARTIFACT_PREVIEW_SOFFICE at the binary."
+  ],
+  "options": {
+    "max_pages": 12,
+    "collage": true,
+    "page_range": null,
+    "thumbnail": true,
+    "text_only": false,
+    "jpeg_quality": 85,
+    "out_max_dim": 2048
+  },
+  "summary": {
+    "slide_count": 0,
+    "slide_titles": []
+  }
+}

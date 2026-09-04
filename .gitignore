@@ -1,0 +1,37 @@
+### IntelliJ IDEA ###
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+# 项目排除路径
+/healthy-common/target/
+/healthy-dao/target/
+/healthy-legacy/target/
+/healthy-service/target/
+/healthy-ui-base/target/
+/healthy-ui-feature/target/
+/healthy-ui-shell/target/

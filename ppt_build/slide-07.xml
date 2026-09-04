@@ -1,0 +1,142 @@
+<slide xmlns="https://www.larkoffice.com/sml/2.0">
+  <style>
+    <fill>
+      <fillColor color="rgb(255,255,255)"/>
+    </fill>
+  </style>
+  <data>
+    <shape type="text" topLeftX="60" topLeftY="28" width="400" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>06 · 数据模型</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="880" topLeftY="28" width="40" height="28">
+      <content textType="caption" fontSize="13" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="right" wrap="false">
+        <p>07</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="72" width="840" height="52">
+      <content textType="headline" fontSize="32" fontFamily="思源黑体" color="rgba(0,28,84,1)" textAlign="left" wrap="false">
+        <p>数据库设计：6 张业务表</p>
+      </content>
+    </shape>
+    <line startX="60" startY="132" endX="900" endY="132">
+      <border color="rgb(212,229,247)" width="1"/>
+    </line>
+
+    <table topLeftX="60" topLeftY="156" width="840" height="258">
+      <colgroup>
+        <col width="180"/>
+        <col width="230"/>
+        <col width="430"/>
+      </colgroup>
+      <tr height="30">
+        <td>
+          <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+          <content textType="body" fontSize="13" fontFamily="Roboto Mono" color="rgba(255,255,255,1)" textAlign="center" bold="true"><p>表名</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+          <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(255,255,255,1)" textAlign="center" bold="true"><p>说明</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(0,48,135,1)"/></fill>
+          <content textType="body" fontSize="13" fontFamily="思源黑体" color="rgba(255,255,255,1)" textAlign="center" bold="true"><p>关键字段</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>users</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>用户账号</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>tel, pwd, name, role</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>checkitem</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>检查项</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>id, name, category, price, description</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>checkgroup</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>检查组</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>id, name, description</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>checkgroup_item</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>检查组-检查项关联</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>group_id, item_id</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>appointment</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>预约</p></content>
+        </td>
+        <td>
+          <fill><fillColor color="rgba(244,248,253,1)"/></fill>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>id, user_tel, group_id, exam_date, status</p></content>
+        </td>
+      </tr>
+      <tr height="38">
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(0,48,135,1)" textAlign="center" bold="true"><p>exam_result</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="center"><p>体检结果</p></content>
+        </td>
+        <td>
+          <content textType="body" fontSize="12" fontFamily="Roboto Mono" color="rgba(71,85,105,1)" textAlign="center"><p>id, appointment_id, item_id, item_value, result_status</p></content>
+        </td>
+      </tr>
+    </table>
+
+    <shape type="text" topLeftX="60" topLeftY="436" width="840" height="40">
+      <content textType="body" fontSize="15" fontFamily="思源黑体" color="rgba(71,85,105,1)" textAlign="left" wrap="false">
+        <p>外键关联形成两条主线：<span bold="true" color="rgba(0,48,135,1)">用户 → 预约 → 结果</span>、<span bold="true" color="rgba(0,48,135,1)">检查组 → 检查项</span>。</p>
+      </content>
+    </shape>
+    <shape type="text" topLeftX="60" topLeftY="486" width="840" height="36">
+      <content textType="body" fontSize="14" fontFamily="思源黑体" color="rgba(100,116,139,1)" textAlign="left" wrap="false">
+        <p>数据初始化脚本：resources/init.sql</p>
+      </content>
+    </shape>
+  </data>
+  <note>
+    <content textType="body">
+      <p>数据库共 6 张表。用户表存账号与角色，检查项和检查组通过关联表组成套餐，预约记录患者、套餐与日期，结果表记录每次体检各检查项的数值与状态。</p>
+      <p>外键关系构成两条主线：用户到预约到结果，以及检查组到检查项，保证体检业务流程的完整性。</p>
+      <p>建表与种子数据统一放在 resources/init.sql 中，便于初始化环境。</p>
+    </content>
+  </note>
+</slide>
