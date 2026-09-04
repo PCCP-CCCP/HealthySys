@@ -2,31 +2,34 @@
 
 ## 模块职责
 
-承载业务规则与校验逻辑，向上为界面层提供「封装好的业务操作」，向下调用 `healthy-dao` 与 `healthy-common`。当前聚焦登录 / 注册等用户业务；后续可在本模块扩展预约、录入等业务规则，将校验逻辑从面板中抽出。
+承载业务规则与校验逻辑，向上为界面层提供「封装好的业务操作」，向下调用 `healthy-dao` 与 `healthy-common`。当前覆盖登录 / 注册 / 个人信息维护 / 密码修改等用户业务，并是**密码加密的唯一入口**。
 
 ## 包结构
 
 ```
 com.nd.service
-└── UserService.java   # 用户业务：登录校验、注册校验
+└── UserService.java   # 用户业务：登录校验、注册校验、资料查询/更新、修改密码
 ```
 
 ## 方法清单与功能说明
 
 | 方法 | 功能 |
 | --- | --- |
-| `login(tel, pwd)` | 登录：参数非空校验 + 调用 UserDao 校验账号密码，返回用户实体（供界面写入 Session） |
-| `register(...)` | 注册：手机号格式/非空校验 + 检查手机号是否已注册 + 新增用户 |
-| `checkTelExists(tel)` | 供注册流程检查手机号是否已存在 |
+| `login(tel, pwd)` | 登录：参数非空校验 + 按账号取盐重算密文比对，成功返回角色并写入会话姓名 |
+| `register(...)` | 注册：入参校验 + 手机号查重 + **生成随机盐并加密密码**后写入 |
+| `getProfile(tel)` | 查询当前用户个人资料（含出生日期/性别/身高/体重） |
+| `updateProfile(tel, name, birthDate, gender, height, weight)` | 修改个人资料：姓名非空/数值合法性校验后更新 |
+| `changePassword(tel, oldPwd, newPwd, confirmPwd)` | 修改密码：校验原密码 → 换新盐新密文更新 |
 
 ## 关键说明
 
-- 业务校验规则（非空、格式、唯一性）集中在本层，界面层不直接拼 SQL 或做重复校验。
+- 业务校验规则（非空、格式、唯一性、原密码正确性）集中在本层，界面层不直接拼 SQL 或做重复校验。
+- **密码安全是本层的核心职责**：注册/登录/改密的加解密都经由 `PasswordUtil`（`healthy-common`）完成，明文密码仅在本层方法栈中短暂存在，不落库、不入会话。
 - 后续如需扩展（如「预约日期不能早于今天」「同一用户同组同日期不可重复预约」），在此层新增方法即可。
 
 ## 依赖
 
-- healthy-common（实体、Session）
+- healthy-common（实体、Session、PasswordUtil）
 - healthy-dao（UserDao 等）
 
 ## 多人协作建议

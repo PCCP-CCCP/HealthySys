@@ -16,6 +16,8 @@
 | 录入结果 | 医生输入患者姓名 → 查询其预约 → 选择某次体检逐项录入结果 | healthy-ui-feature / healthy-dao |
 | 跟踪管理 | 患者查看历次检查结果总览 + 按检查项对比 | healthy-ui-feature / healthy-dao |
 | 查看患者结果 | 医生查看任意患者历次结果（实现与患者跟踪管理一致） | healthy-ui-feature / healthy-dao |
+| 个人信息管理 | 维护出生日期/性别/身高/体重等资料，可修改个人信息与登录密码 | healthy-ui-feature / healthy-service |
+| 密码加密存储 | 用户密码以「随机盐 + SHA-256」单向加密入库，不落明文 | healthy-service / healthy-common |
 
 ---
 
@@ -60,7 +62,7 @@ healthy-common  ←  所有模块都可依赖（唯一持有 JDBC 驱动）
 healthy-dao     ←  common
 healthy-service ←  common + dao
 healthy-ui-base ←  无业务依赖（纯 UI 组件）
-healthy-ui-feature ← common + dao + ui-base
+healthy-ui-feature ← common + dao + service + ui-base
 healthy-ui-shell   ← common + dao + service + ui-base + ui-feature
 healthy-legacy     ← common（仅历史参考，不参与主流程）
 ```
@@ -71,11 +73,11 @@ healthy-legacy     ← common（仅历史参考，不参与主流程）
 
 | 模块 | 职责 | 关键类 | 说明文档 |
 | --- | --- | --- | --- |
-| healthy-common | 公共层：JDBC 工具、实体、会话 | `JdbcUtil`、`DBConfig`、4 个实体、`Session` | [README](healthy-common/README.md) |
+| healthy-common | 公共层：JDBC 工具、实体、会话、密码加密 | `JdbcUtil`、`DBConfig`、5 个实体、`Session`、`PasswordUtil` | [README](healthy-common/README.md) |
 | healthy-dao | 数据访问层：按大功能拆 5 个 DAO | `UserDao`、`CheckItemDao`、`CheckGroupDao`、`AppointmentDao`、`ExamResultDao` | [README](healthy-dao/README.md) |
-| healthy-service | 业务逻辑层 | `UserService` | [README](healthy-service/README.md) |
+| healthy-service | 业务逻辑层：登录/注册/个人信息/改密（密码加密入口） | `UserService` | [README](healthy-service/README.md) |
 | healthy-ui-base | UI 主题与自绘组件 | `UITheme`、`ModernButtonUI`、`ModernTabbedPaneUI`、`GradientPanel`、`RoundedPanel`、`RoundedField` 等 | [README](healthy-ui-base/README.md) |
-| healthy-ui-feature | 功能面板（按功能分包） | 检查项 / 检查组 / 预约 / 录入 / 跟踪 / 患者结果 | [README](healthy-ui-feature/README.md) |
+| healthy-ui-feature | 功能面板（按功能分包） | 检查项 / 检查组 / 预约 / 录入 / 跟踪 / 患者结果 / 个人信息 | [README](healthy-ui-feature/README.md) |
 | healthy-ui-shell | 应用壳层：入口与主界面 | `App`、`MainView`、`LoginView`、`RegisterDialog` | [README](healthy-ui-shell/README.md) |
 | healthy-legacy | 旧版代码归档（仅参考） | `CheckItem`、`IndexView` 等 | [README](healthy-legacy/README.md) |
 
@@ -104,7 +106,7 @@ healthy-legacy     ← common（仅历史参考，不参与主流程）
 
 | 表 | 说明 | 关键字段 |
 | --- | --- | --- |
-| users | 用户 | tel, pwd, name, role（doctor/patient） |
+| users | 用户 | tel, pwd(密文), salt(盐), name, role, birth_date, gender, height, weight |
 | checkitem | 检查项 | id, name, category, price, description, create_time |
 | checkgroup | 检查组 | id, name, description, create_time |
 | checkgroup_item | 检查组-检查项关联 | group_id, item_id |
@@ -137,7 +139,19 @@ java -cp "healthy-common/target/classes;healthy-dao/target/classes;healthy-servi
 | 183 | 123456 | doctor | 「管理员」，可一键切换医生/患者视角 |
 | 1 | 1 | patient | 仅患者视角 |
 
+> 用户密码以「随机盐 + SHA-256」加密存储于 `users.pwd` / `users.salt`，登录时由业务层自动校验，数据库不保存明文。
 > 数据库连接配置集中在 `healthy-common` 的 `DBConfig.java`，如需修改请改该文件。
+
+### 5. 安全设计（密码加密）
+
+密码采用**随机盐 + SHA-256** 单向哈希存储，杜绝明文落库：
+
+- **加密算法**：`SHA-256(salt + password)`，盐为 16 字节 `SecureRandom` 随机值。
+- **存储**：`users.pwd` 存 64 位哈希，`users.salt` 存 32 位盐（hex）；同一密码因盐不同密文也不同。
+- **注册**：`UserService.register` 生成随机盐并加密后入库，明文仅存在于内存。
+- **登录**：`UserService.login` 按账号取盐，重算摘要与库中密文比对（恒定时间比较）。
+- **改密**：`UserService.changePassword` 先验旧密码，再换新盐新密文更新。
+- **实现**：加密逻辑统一封装在 `healthy-common` 的 `PasswordUtil`，业务层 `UserService` 是唯一加解密入口。
 
 ---
 
@@ -148,6 +162,7 @@ java -cp "healthy-common/target/classes;healthy-dao/target/classes;healthy-servi
 - **视角**（`Session.currentRole`）：
   - 医生视角：检查项管理、检查组管理、录入结果、查看患者结果。
   - 患者视角：预约、跟踪管理。
+  - 两个视角均含「个人信息管理」（资料维护与改密）。
 - 医生账号可在主界面右上角「一键切换角色」；仅患者账号登录后不显示该按钮。
 
 ---

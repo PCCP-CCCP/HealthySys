@@ -8,7 +8,7 @@
 
 ```
 com.nd.dao
-├── UserDao.java          # 用户：login / checkTelExists / register
+├── UserDao.java          # 用户：findByTel / checkTelExists / register / updateProfile / updatePassword
 ├── CheckItemDao.java     # 检查项：queryAll / insert / update / delete
 ├── CheckGroupDao.java    # 检查组：queryAll / queryGroupItems / queryGroupItemIds / create / update / delete（含事务）
 ├── AppointmentDao.java   # 预约：create / queryByUser / queryByUserName / cancel / updateStatus
@@ -20,9 +20,11 @@ com.nd.dao
 ### UserDao（用户）
 | 方法 | 功能 |
 | --- | --- |
-| `login(tel, pwd)` | 按手机号+密码查询用户，登录校验 |
+| `findByTel(tel)` | 按账号查询用户完整信息（含密码密文、盐与个人健康信息） |
 | `checkTelExists(tel)` | 检查手机号是否已注册 |
-| `register(...)` | 新增用户（含角色） |
+| `register(tel, pwdHash, salt, name, role)` | 新增用户（**密文+盐**，由业务层加密后传入） |
+| `updateProfile(tel, name, birthDate, gender, height, weight)` | 更新个人资料（姓名/出生日期/性别/身高/体重） |
+| `updatePassword(tel, pwdHash, salt)` | 更新密码密文与盐（由业务层负责旧密码校验） |
 
 ### CheckItemDao（检查项管理）
 | 方法 | 功能 |
@@ -64,7 +66,7 @@ com.nd.dao
 ## 关键说明
 
 - **事务**：检查组创建/修改/删除涉及 `checkgroup` 与 `checkgroup_item` 两张表，使用 `Connection` + `rollback` 保证原子性，出错自动回滚。
-- 所有方法通过 `com.nd.common.db.JdbcUtil` 访问数据库。
+- **密码安全**：本层**不接触明文密码**——注册接收的是业务层加密后的密文与盐；登录校验由业务层用盐重算比对，本层只负责按账号取回密文/盐。所有方法通过 `com.nd.common.db.JdbcUtil` 访问数据库。
 
 ## 依赖
 
